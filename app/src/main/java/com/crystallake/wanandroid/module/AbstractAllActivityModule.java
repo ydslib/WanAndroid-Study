@@ -1,6 +1,7 @@
 package com.crystallake.wanandroid.module;
 
 import com.crystallake.wanandroid.MainActivity;
+import com.crystallake.wanandroid.activity.SplashActivity;
 import com.crystallake.wanandroid.component.BaseActivityComponent;
 
 import dagger.Module;
@@ -14,4 +15,7 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class AbstractAllActivityModule {
     @ContributesAndroidInjector(modules = MainActivityModule.class)
     abstract MainActivity contributesMainActivityInjector();
+
+    @ContributesAndroidInjector(modules = SplashActivityModule.class)
+    abstract SplashActivity contributesSplashActivityInjector();
 }

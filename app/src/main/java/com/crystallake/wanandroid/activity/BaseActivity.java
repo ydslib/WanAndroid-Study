@@ -34,15 +34,15 @@ public abstract class BaseActivity<T extends AbstractPresenter> extends Abstract
 
     @Override
     protected void onViewCreated() {
-        if (mPresenter!=null){
+        if (mPresenter != null) {
             mPresenter.attachView(this);
         }
     }
 
     @Override
     protected void onDestroy() {
-        if (mPresenter!=null){
-            mPresenter.detachView();;
+        if (mPresenter != null) {
+            mPresenter.detachView();
             mPresenter = null;
         }
         super.onDestroy();
@@ -55,15 +55,15 @@ public abstract class BaseActivity<T extends AbstractPresenter> extends Abstract
 
     @Override
     public void useNightMode(boolean isNightMode) {
-        if (isNightMode){
+        if (isNightMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        }else{
+        } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
         recreate();
     }
 
-    public void showErrorMsg(String errorMsg){
+    public void showErrorMsg(String errorMsg) {
 
     }
 
